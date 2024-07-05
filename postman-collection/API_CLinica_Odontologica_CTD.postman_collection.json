@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "d9720a63-d83d-4354-9abe-6dabaaa87f7f",
+		"name": "API_CLinica_Odontologica_CTD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21143127"
+	},
+	"item": [
+		{
+			"name": "clinicaOdontologica",
+			"item": [
+				{
+					"name": "pacientes",
+					"item": [
+						{
+							"name": "listarPacientes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/pacientes/listar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pacientes",
+										"listar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registraPaciente",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Casseli\",\r\n    \"apellido\": \"Layza\",\r\n    \"dni\": 12345678,\r\n    \"fechaIngreso\": \"2024-06-22\",\r\n    \"domicilio\": {\r\n        \"calle\": \"Miraflores\",\r\n        \"numero\": 742,\r\n        \"localidad\": \"Miraflores\",\r\n        \"provincia\": \"Lima\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/pacientes/registrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pacientes",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "buscarPaciente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/pacientes/buscar/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pacientes",
+										"buscar",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizarPaciente",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"nombre\": \"Pepito\",\r\n        \"apellido\": \"Layza\",\r\n        \"dni\": 35464856,\r\n        \"fechaIngreso\": \"2024-06-20\",\r\n        \"domicilio\": {\r\n            \"calle\": \"Husquil\",\r\n            \"numero\": 742,\r\n            \"localidad\": \"Bambamarca\",\r\n            \"provincia\": \"Lima\"\r\n        }\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/pacientes/actualizar/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pacientes",
+										"actualizar",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminaraPaciente",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/pacientes/eliminar/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pacientes",
+										"eliminar",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "odontologos",
+					"item": [
+						{
+							"name": "ListarOdontologos",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"matricula\": \"MAT-75624\",\r\n        \"nombre\": \"Layza\",\r\n        \"apellido\": 35464856\r\n\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/odontologos/listar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"odontologos",
+										"listar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registraOdontologo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"matricula\": \"MAT-75624\",\r\n    \"nombre\": \"Casseli\",\r\n    \"apellido\": \"Lazya\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/odontologos/registrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"odontologos",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "buscarOdontologo",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"matricula\": \"MAT-75624\",\r\n        \"nombre\": \"Layza\",\r\n        \"apellido\": 35464856\r\n\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/odontologos/buscar/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"odontologos",
+										"buscar",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizarOdontologo",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"matricula\": \"MAT-75624\",\r\n    \"nombre\": \"Segundo modificado final doctor\",\r\n    \"apellido\": \"Lazya\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/odontologos/actualizar/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"odontologos",
+										"actualizar",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminarOdontologo",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"matricula\": \"MAT-75624\",\r\n        \"nombre\": \"Segundo\",\r\n        \"apellido\": \"Lazya\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/odontologos/eliminar/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"odontologos",
+										"eliminar",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "turnos",
+					"item": [
+						{
+							"name": "ListarTurnos",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"matricula\": \"MAT-75624\",\r\n        \"nombre\": \"Layza\",\r\n        \"apellido\": 35464856\r\n\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/turnos/listar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"turnos",
+										"listar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "registraTurno",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fechaYHora\": \"2024-06-27 11:06:00\",\r\n    \"odontologo\": {\r\n        \"matricula\": \"MAT-75624\",\r\n        \"nombre\": \"Casseli\",\r\n        \"apellido\": \"Lazya\"\r\n    },\r\n    \"paciente\": {\r\n        \"nombre\": \"Casseli\",\r\n        \"apellido\": \"Layza\",\r\n        \"dni\": 12345678,\r\n        \"fechaIngreso\": \"2024-06-28\",\r\n        \"domicilio\": {\r\n            \"calle\": \"Miraflores\",\r\n            \"numero\": 742,\r\n            \"localidad\": \"Miraflores\",\r\n            \"provincia\": \"Lima\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/turnos/registrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"turnos",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "buscarTurno",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/turnos/buscar/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"turnos",
+										"buscar",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizarTurno",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fechaYHora\": \"2027-10-17 11:06:00\",\r\n    \"odontologo\": {\r\n        \"matricula\": \"MAT-75624\",\r\n        \"nombre\": \"Casseli\",\r\n        \"apellido\": \"Layza\"\r\n    },\r\n    \"paciente\": {\r\n        \"nombre\": \"Casseli\",\r\n        \"apellido\": \"Layza\",\r\n        \"dni\": 12345678,\r\n        \"fechaIngreso\": \"2024-06-20\",\r\n        \"domicilio\": {\r\n            \"calle\": \"Miraflores\",\r\n            \"numero\": 742,\r\n            \"localidad\": \"Miraflores\",\r\n            \"provincia\": \"Lima\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/turnos/actualizar/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"turnos",
+										"actualizar",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminarTurno",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"matricula\": \"MAT-75624\",\r\n        \"nombre\": \"Segundo\",\r\n        \"apellido\": \"Lazya\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/turnos/eliminar/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"turnos",
+										"eliminar",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
